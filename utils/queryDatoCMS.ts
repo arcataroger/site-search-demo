@@ -25,7 +25,7 @@ export default async function queryDatoCMS<
   if (isDraft) headers['X-Include-Drafts'] = 'true';
 
   const response = await fetch(process.env.DATOCMS_GRAPHQL_URL!, {
-    cache: 'force-cache',
+    // cache: 'force-cache',
     next: { tags: ['datocms'] },
     method: 'POST',
     headers,
